@@ -3,6 +3,8 @@ const path = require("node:path");
 const express = require("express");
 const app = express();
 
+app.use(express.static(path.join(__dirname, "public")));
+
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
